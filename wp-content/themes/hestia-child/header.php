@@ -64,7 +64,7 @@
                     <li>|</li>
                     <li><a itemprop="url" href="https://dentacare.dentacoin.com/" target="_blank"><span itemprop="name">Dentacare</span></a></li>
                     <li>|</li>
-                    <li><a itemprop="url" href="https://reviews.dentacoin.com/" target="_blank"><span itemprop="name">Truest Reviews</span></a></li>
+                    <li><a itemprop="url" href="https://reviews.dentacoin.com/" target="_blank"><span itemprop="name">Trusted Reviews</span></a></li>
                     <li>|</li>
                     <li><a itemprop="url" href="https://dentavox.dentacoin.com/" target="_blank"><span itemprop="name">DentaVox</span></a></li>
                 </ul>
