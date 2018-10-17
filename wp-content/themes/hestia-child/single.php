@@ -29,10 +29,10 @@ $post_data = get_post_meta($curr_post->ID);
     ?>
     <div class="custom-padding content-container">
         <div class="row">
-            <div class="col-xs-2 semi-fixed-socials">
+            <div class="col-sm-2 col-md-1 semi-fixed-socials">
                 <?php dynamic_sidebar('custom-widget'); ?>
             </div>
-            <div class="col-xs-10 next-to-socials">
+            <div class="col-xs-12 col-sm-10 col-md-11 next-to-socials">
                 <div class="title"><?php echo $post->post_title; ?></div>
                 <div class="author">Published by <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php the_author_meta( 'display_name', $post->post_author ); ?></a> on <time><?php echo date('M d, Y', strtotime($post->post_date)); ?></time></div>
                 <div class="description">

@@ -192,7 +192,7 @@
             vertical-align: middle;
         }
     }
-    @include breakpoint($sm-down)   {
+    @include breakpoint($sm-only)   {
         .content-container {
             .semi-fixed-socials {
                 width: 45px;
@@ -207,6 +207,9 @@
         padding-bottom: 50px;
         .content-container {
             padding-top: 15px;
+            >.row {
+                display: block;
+            }
             .title {
                 font-size: 22px;
                 line-height: 35px;
@@ -214,6 +217,25 @@
             .next-to-socials {
                 padding-left: 0;
                 padding-right: 0;
+                width: 100%;
+            }
+            .semi-fixed-socials {
+                width: 100%;
+                text-align: center;
+                padding-bottom: 20px;   
+                aside {
+                    position: static;
+                    a {
+                        display: inline-block;
+                    }
+                    .a2a_count {
+                        display: inline-block;
+                        margin-left: 7px;
+                    }
+                }
+            }
+            .next-to-socials {
+                width: 100%;
             }
         }
         .comments-form {
