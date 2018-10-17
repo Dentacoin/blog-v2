@@ -1709,7 +1709,8 @@ footer {
         .single-post-container .content-container .semi-fixed-socials {
           width: 100%;
           text-align: center;
-          padding-bottom: 20px; }
+          padding-bottom: 20px;
+          padding-top: 10px; }
           .single-post-container .content-container .semi-fixed-socials aside {
             position: static; }
             .single-post-container .content-container .semi-fixed-socials aside a {
