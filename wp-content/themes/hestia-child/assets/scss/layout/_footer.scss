@@ -1,0 +1,78 @@
+footer {
+    background-color: #323437;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .mailchimp-form {
+        display: none;
+        text-align: center;
+        form {
+            margin: 0 auto;
+            padding-bottom: 30px;
+            max-width: 300px;
+            width: 100%;
+            .mc4wp-response {
+                font-size: 12px;
+            }
+            .title {
+                font-size: 18px;
+                padding-bottom: 5px;
+            }
+            p {
+                margin-bottom: 5px;
+            }
+            .privacy-policy-text {
+                padding-top: 5px;
+                padding-bottom: 10px;
+                font-family: "Ubuntu Light";
+                a {
+                    color: white;
+                    text-decoration: underline;
+                }
+            }
+            input {
+                margin: 0 auto;
+                padding: 5px;
+            }
+            .btn-container {
+                input {
+                    background-color: $light_blue !important;
+                    color: white;
+                    text-transform: uppercase;
+                    width: 100%;
+                    text-align: center;
+                    @include rounded(6px);
+                }
+            }
+        }
+    }
+    nav {
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+                a {
+                    color: white;
+                    display: block;
+                    padding: 0 10px;
+                    font-size: 16px;
+                    &:hover {
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+                @include breakpoint($xs)    {
+                    display: block;
+                    text-align: center;
+                    padding-bottom: 7px;
+                }
+            }
+        }
+    }
+    @include breakpoint($sm-down)   {
+        .mailchimp-form {
+            display: block;
+        }
+    }
+}

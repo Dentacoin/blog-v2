@@ -1,0 +1,223 @@
+.single-post-container {
+    padding-bottom: 100px;
+    figure.post-thumb {
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        img {
+            @include vertical-horizontal-align(absolute);
+        }
+        @include breakpoint($max-llgl)  {
+            height: 400px;
+        }
+        @include breakpoint($xs)    {
+            height: 250px;
+        }
+    }
+    .content-container {
+        padding-top: 50px;
+        >.row {
+            display: flex;
+        }
+        >.row-just-for-border {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .semi-fixed-socials {
+            position: relative;
+            aside {
+                position: absolute;
+                top: 0;
+                left: 0;
+                .a2a_count {
+                    display: block;
+                    margin: 0;
+                    width: 30px !important;
+                    &:after, &:before {
+                        display: none;
+                    }
+                }
+                a {
+                    display: block;
+                    line-height: initial;
+                }
+            }
+        }
+        .title {
+            font-size: 50px;
+            line-height: 55px;
+            text-align: center;
+            font-family: 'Ubuntu Light';
+        }
+        .description {
+            padding-bottom: 50px;
+            font-size: 16px;
+            a {
+                color: $light_blue;
+            }
+            p {
+                overflow: auto;
+            }
+        }
+        .author {
+            color: #999999;
+            font-size: 18px;
+            text-align: center;
+            font-family: 'Ubuntu Light';
+            padding-top: 20px;
+            padding-bottom: 40px;
+            a {
+                color: $light_blue;
+            }
+        }
+        .categories {
+            .cats-title {
+                text-transform: uppercase;
+                padding-right: 5px;
+            }
+            a {
+                color: white;
+                background-color: $light_blue;
+                padding: 2px 7px;
+                text-transform: uppercase;
+                margin: 0 2px;
+                @include rounded(12px);
+            }
+        }
+        .tags {
+            padding-top: 10px;
+            padding-bottom: 50px;
+            .tags-title {
+                text-transform: uppercase;
+                padding-right: 5px;
+            }
+            .entry-tag {
+                a {
+                    color: $light_blue;
+                    margin: 0 3px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .slider {
+        padding-top: 20px;
+    }
+    .custom-border {
+        margin-top: 50px;
+    }
+    .comments-form {
+        padding-top: 50px;
+        font-size: 0;
+        .comment {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #D3D3D3;
+        }
+        .children {
+            .comment {
+                border: 0;
+            }
+        }
+        .comment .pull-left {
+            padding-right: 10px;
+        }
+        .section-comments ul.children .comment-author.avatar, .section-comments ul.children .avatar img {
+            width: 40px;
+            height: 40px;
+        }
+        .media .avatar, .media-body .avatar, .media-area .avatar {
+            overflow: hidden;
+            width: 64px;
+            height: 64px;
+            margin: 0 auto;
+            margin-right: 15px;
+            -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+            @include rounded(50%);
+        }
+        h3 {
+            font-family: 'Ubuntu Light';
+            padding-bottom: 20px;
+            font-size: 28px;
+        }
+        .media-footer {
+            text-align: right;
+            .comment-reply-link {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        p {
+            margin-bottom: 10px;
+            &.aiowps-captcha {
+                margin: 0;
+            }
+        }
+        a {
+            color: $light_blue;
+        }
+        input[type='submit'] {
+            background-color: $light_blue !important;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            border: 0;
+            @include box-shadow(none);
+            @include rounded(6px);
+            &:hover {
+                @include box-shadow(none);
+            }
+        }
+        .media-body {
+            font-size: 16px;
+        }
+        .comment-notes {
+            display: none;
+            &.visible-notes {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% - 140px);
+                font-size: 14px;
+            }
+        }
+        .form-submit {
+            width: 140px;
+            text-align: right;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    @include breakpoint($sm-down)   {
+        .content-container {
+            .semi-fixed-socials {
+                width: 45px;
+                padding: 0;
+            }
+            .next-to-socials {
+                width: calc(100% - 45px);
+            }
+        }
+    }
+    @include breakpoint($xs)   {
+        padding-bottom: 50px;
+        .content-container {
+            padding-top: 15px;
+            .title {
+                font-size: 22px;
+                line-height: 35px;
+            }
+            .next-to-socials {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .comments-form {
+            padding-top: 0;
+        }
+    }
+}

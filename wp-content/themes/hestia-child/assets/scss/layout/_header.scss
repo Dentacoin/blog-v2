@@ -1,0 +1,125 @@
+header {
+    nav.header-menu {
+        font-size: 14px;
+        #main-navigation {
+            padding-left: 0;
+            ul {
+                &.navbar-right {
+                    float: none !important;
+                }
+                li {
+                    position: relative;
+                    a {
+                        color: $light_gray;
+                        padding: 15px 10px;
+                        &:hover {
+                            background-color: white !important;
+                            color: $main_color;
+                        }
+                    }
+                    &.current-menu-item {
+                        a {
+                            color: $main_color;
+                            font-weight: bold;
+                        }
+                    }
+                    &:after {
+                        content: "\00B7";
+                        color: $light_gray;
+                        font-size: 22px;
+                        left: -2px;
+                        @include vertical-align(absolute);
+                    }
+                    &:first-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobile-nav-container {
+        display: none;
+    }
+    .socials {
+        text-align: right;
+        font-size: 20px;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                a {
+                    color: $main_color;
+                    display: block;
+                    padding: 0 5px;
+                }
+                &.search {
+                    border-left: 1px solid $main_color;
+                    padding-left: 10px;
+                    form {
+                        margin: 0;
+                        .label-floating {
+                            display: none;
+                            position: absolute;
+                            z-index: 10;
+                            top: 100%;
+                            right: 0;
+                            float: none !important;
+                            max-width: none;
+                            .screen-reader-text, .control-label {
+                                display: none;
+                            }
+                            .search-field {
+                                width: 200px;
+                            }
+                            &.is-focused {
+                                .search-field {
+                                    background-color: white;
+                                    background-image: none;
+                                    @include animation(0s, .3s, fadeIn);
+                                }
+                            }
+                        }
+                        .search-submit {
+                            border: 0;
+                            background-color: white;
+                            font-size: 0;
+                            width: 22px;
+                            background-position: center;
+                            height: 22px;
+                            vertical-align: middle;
+                            background-image: url(../images/magnify.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            @include box-shadow(none);
+                            &:hover {
+                                @include box-shadow(none);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint($max-lgl)   {
+        &.custom-padding {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+    @include breakpoint($sm-down)   {
+        nav.header-menu {
+            display: none;
+        }
+        .mobile-nav-container {
+            display: inline-block;
+            font-size: 26px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            a {
+                color: $main_color;
+            }
+        }
+    }
+}
