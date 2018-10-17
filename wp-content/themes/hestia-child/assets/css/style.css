@@ -1445,7 +1445,8 @@ footer {
     .homepage-container .featured-slider .single-slide {
       position: relative; }
       .homepage-container .featured-slider .single-slide figure {
-        width: 75%; }
+        width: 75%;
+        padding: 0 2px; }
       .homepage-container .featured-slider .single-slide .content {
         width: 350px;
         padding: 0 40px;
