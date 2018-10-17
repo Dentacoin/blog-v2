@@ -1012,7 +1012,8 @@ img {
         .main-sidebar .wrapper .apps-nav ul li {
           display: inline-block; }
           .main-sidebar .wrapper .apps-nav ul li a {
-            color: white; }
+            color: white;
+            padding: 0 3px; }
             .main-sidebar .wrapper .apps-nav ul li a:hover {
               text-decoration: underline; }
   .main-sidebar .close {
