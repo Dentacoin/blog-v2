@@ -1572,7 +1572,9 @@ footer {
       font-family: 'Ubuntu Light'; }
     .single-post-container .content-container .description {
       padding-bottom: 50px;
-      font-size: 16px; }
+      font-size: 18px; }
+      .single-post-container .content-container .description ul li {
+        list-style: disc inside none; }
       .single-post-container .content-container .description a {
         color: #80b8dc; }
       .single-post-container .content-container .description p {

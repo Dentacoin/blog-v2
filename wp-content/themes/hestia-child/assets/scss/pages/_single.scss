@@ -54,7 +54,12 @@
         }
         .description {
             padding-bottom: 50px;
-            font-size: 16px;
+            font-size: 18px;
+            ul {
+                li {
+                    list-style: disc inside none;  
+                }
+            }
             a {
                 color: $light_blue;
             }
