@@ -1524,6 +1524,8 @@ footer {
 
 .single-post-container {
   padding-bottom: 100px; }
+  .single-post-container input.form-control[name='siwp_captcha_value'] {
+    width: auto; }
   .single-post-container figure.post-thumb {
     height: 300px;
     position: relative;

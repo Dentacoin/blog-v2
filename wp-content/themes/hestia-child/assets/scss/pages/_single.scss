@@ -1,5 +1,8 @@
 .single-post-container {
     padding-bottom: 100px;
+    input.form-control[name='siwp_captcha_value'] {
+        width: auto;
+    } 
     figure.post-thumb {
         height: 300px;
         position: relative;
