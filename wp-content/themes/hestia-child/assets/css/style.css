@@ -1573,6 +1573,8 @@ footer {
     .single-post-container .content-container .description {
       padding-bottom: 50px;
       font-size: 20px; }
+      .single-post-container .content-container .description img.pull-left, .single-post-container .content-container .description img.pull-right {
+        margin: 10px; }
       .single-post-container .content-container .description ul li {
         list-style: disc inside none; }
       .single-post-container .content-container .description a {

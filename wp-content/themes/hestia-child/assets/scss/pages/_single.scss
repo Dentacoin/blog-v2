@@ -54,7 +54,12 @@
         }
         .description {
             padding-bottom: 50px;
-            font-size: 20px; 
+            font-size: 20px;
+            img {
+                &.pull-left, &.pull-right {
+                    margin: 10px;  
+                }
+            }
             ul {
                 li {
                     list-style: disc inside none;
