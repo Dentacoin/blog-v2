@@ -1,15 +1,5 @@
 jQuery(window).on('load', function()   {
-    if(jQuery('.single-post-container').length > 0) {
-        var fixed_socials_offset_top = jQuery('.semi-fixed-socials aside').offset().top;
-        var fixed_socials_height = jQuery('.semi-fixed-socials aside').height();
-        var scroll_top = 0;
-        var max_scroll = jQuery('.semi-fixed-socials').offset().top + jQuery('.semi-fixed-socials').height();
-        jQuery(window).on('scroll', function () {
-            if (jQuery(window).scrollTop() + jQuery(window).height() / 2 > fixed_socials_offset_top + fixed_socials_height / 2 && jQuery(window).scrollTop() + jQuery(window).height() / 2 < jQuery('.semi-fixed-socials').offset().top + jQuery('.semi-fixed-socials').height() - fixed_socials_height / 2) {
-                jQuery('.semi-fixed-socials aside').css({'top': (jQuery(window).scrollTop() + jQuery(window).height() / 2) - (fixed_socials_offset_top + fixed_socials_height / 2) + 'px'});
-            }
-        });
-    }
+    
 });
 
 //PAGES

@@ -1,6 +1,12 @@
 .homepage-container {
     padding-top: 40px;
     padding-bottom: 50px;
+    .custom-border.only-mobile {
+        display: none;
+        @include breakpoint($sm-down)   {
+            display: block;
+        }
+    }
     .featured-slider {
         padding-bottom: 40px;
         .single-slide {
@@ -29,25 +35,28 @@
                             font-family: "Ubuntu Light";
                         }
                         .title {
-                            font-size: 22px;
-                            padding-top: 10px;
                             font-family: "Ubuntu Regular";
-                            padding-bottom: 10px;
+                            padding-bottom: 5px;
+                            padding-top: 5px;
+                            font-size: 26px;
+                            line-height: 28px;
+                            color: $main_color;
                         }
                         .description-text {
                             font-family: "Calibri Light";
-                            font-size: 14px;
+                            font-size: 15px;
                             padding-bottom: 10px;
+                            line-height: 18px;
+                            color: $main_color;
                             @include breakpoint($xxs-500) {
                                 display: none;
                             }
                         }
                         .btn-container {
-                            a {
-                                font-weight: bold;
-                                font-size: 18px;
-                                color: black;
-                            }
+                            font-weight: bold;
+                            font-size: 18px;
+                            color: $light_blue;
+                            text-decoration: underline;
                         }
                     }
                 }
@@ -68,19 +77,26 @@
     }
     @include breakpoint($sm-down) {
         .featured-slider {
+            padding-bottom: 0;
             .single-slide {
                 figure {
                     width: 100%;
                 }
                 .content {
-                    height: 70%;
-                    padding: 0 15px;
-                    background-color: rgba(255, 255, 255, .8);
-                    right: auto;
-                    width: 90%;
-                    @include vertical-horizontal-align(absolute);
+                    width: 100%;
+                    position: static;
+                    transform: none;
+                    height: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 15px;
+                    @include box-shadow(none);
                     .wrapper {
                         .inner-wrapper {
+                            width: 100%;
+                            position: static;
+                            transform: none;
+                            padding-bottom: 20px;
                             time {
                                 font-weight: bold;
                             }
@@ -95,11 +111,28 @@
             }
         }
     }
-    @include breakpoint($xs) {
+    @include breakpoint($xs)    {
         .featured-slider {
             .single-slide {
                 .content {
-                    height: 80%;
+                    .wrapper {
+                        .inner-wrapper {
+                            width: 100%;
+                            position: static;
+                            transform: none;
+                            padding-bottom: 20px;
+                            time {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }
+                            .title {
+                                font-size: 18px;
+                            }
+                            .btn-container {
+                                font-size: 14px;
+                            }
+                        }
+                    }
                 }
             }
         }

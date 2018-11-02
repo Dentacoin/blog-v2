@@ -21,6 +21,17 @@
 }
 
 @font-face {
+    font-family: "Calibri Regular";
+    src: url("../fonts/Calibri.eot");
+    src: url("../fonts/Calibri.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Calibri.woff2") format("woff2"),
+         url("../fonts/Calibri.woff") format("woff"),
+         url("../fonts/Calibri.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Ubuntu Light";
     src: url("../fonts/Ubuntu-L.eot");
     src: url("../fonts/Ubuntu-L.eot?#iefix") format("embedded-opentype"),

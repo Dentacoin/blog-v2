@@ -97,11 +97,18 @@
                     <a href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a>
                 </div>
                 <nav class="col-xs-8 col-md-3 inline-block socials">
+                    <?php
+                        if(is_single()) {
+                            $url = get_permalink($post->ID);
+                        }else {
+                            $url = site_url();
+                        }
+                    ?>
                     <ul itemscope="" itemtype="http://schema.org/Organization">
                         <link itemprop="url" href="<?php echo site_url(); ?>">
-                        <li itemprop="sameAs" class="inline-block"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo site_url(); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li itemprop="sameAs" class="inline-block"><a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo site_url(); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li itemprop="sameAs" class="inline-block"><a target="_blank" href="https://www.pinterest.com/pin/create/button/?url=<?php echo site_url(); ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li itemprop="sameAs" class="inline-block"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li itemprop="sameAs" class="inline-block"><a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li itemprop="sameAs" class="inline-block"><a target="_blank" href="https://www.pinterest.com/pin/create/button/?url=<?php echo $url; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
                         <li itemprop="sameAs" class="inline-block search">
                             <?php get_search_form(); ?>
                         </li>

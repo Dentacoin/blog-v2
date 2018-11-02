@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Calibri;
+    font-family: "Calibri Regular";
     position: relative;
     &.overflow-hidden {
         overflow: hidden;
@@ -166,6 +166,7 @@ img {
         @include box-shadow(none);
     }
     &.featured-slider {
+        overflow: hidden;
         .slick-prev {
             width: 60px;
             height: 60px;
@@ -180,12 +181,20 @@ img {
             .slick-prev {
                 width: 40px;
                 height: 40px;
-                left: -10px;
+                left: 0;
+                top: 35%;
+                background-color: white;
+                background-size: auto 70%;
+                @include box-shadow(0 2px 6px 0 rgba(0,0,0,.4));
             }
             .slick-next {
                 width: 40px;
                 height: 40px;
-                right: -10px;
+                right: 0;
+                top: 35%;
+                background-color: white;
+                background-size: auto 70%;
+                @include box-shadow(0 2px 6px 0 rgba(0,0,0,.4));
             }
         }
     }
@@ -419,8 +428,8 @@ img {
     font-family: "Ubuntu Regular";
     font-size: 16px;
     padding: 0 25px 5px;
-    @include breakpoint($xs)    {
-        padding: 0 10px 5px;
+    @include breakpoint($sm-down)    {
+        padding: 20px 15px 5px;
     }
 }
 
@@ -455,6 +464,7 @@ img {
         }
     }
     @include breakpoint($sm-down)   {
+        margin-bottom: -10px;
         .slick-track {
             a {
                 .single-slide {
@@ -491,7 +501,7 @@ img {
     .single-post-in-list {
         .post-title {
             font-family: "Ubuntu Regular";
-            font-size: 24px;
+            font-size: 26px;
             a {
                 color: $main_color;
             }
@@ -509,13 +519,14 @@ img {
             padding-top: 25px;
             padding-bottom: 25px;
             font-family: "Calibri Light";
-            font-size: 14px;
+            font-size: 15px;
         }
         .btn-container {
             a {
                 font-weight: bold;
                 font-size: 16px;
-                color: black;
+                color: $light_blue;
+                text-decoration: underline;
             }
         }
     }
