@@ -1001,11 +1001,11 @@ img {
         color: green;
         font-weight: bold; }
       .main-sidebar .wrapper .mailchimp-form .email-octopus-error-message {
-        line-height: 40px;
-        font-size: 20px;
+        line-height: 24px;
+        font-size: 18px;
         text-align: center;
         color: red;
-        font-weight: bold; }
+        font-weight: 700; }
       .main-sidebar .wrapper .mailchimp-form form {
         margin-top: 10px;
         margin-bottom: 5px; }
