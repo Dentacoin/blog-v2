@@ -17,6 +17,15 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php endif; ?>
     <?php wp_head(); ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97167262-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-97167262-2');
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -56,7 +65,30 @@
                 <img src="<?php echo get_template_directory_uri(); ?>-child/assets/images/pictograms.svg" alt="Pictorgams" itemprop="contentUrl"/>
             </figure>
             <div class="mailchimp-form">
-                <?php echo do_shortcode('[mc4wp_form id="161"]'); ?>
+                <div class="email-octopus-form-wrapper">
+                    <p class="email-octopus-success-message"></p>
+                    <p class="email-octopus-error-message"></p>
+                    <form method="post" action="https://emailoctopus.com/lists/398a309b-ef00-11e8-a3c9-06b79b628af2/members/embedded/1.3s/add" class="email-octopus-form" data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6" data-success-message="Thank you for signing up!">
+                        <div class="title"> SUBSCRIBE TO OUR LIST</div>
+                        <div class="form-row fs-0 flex email-octopus-form-row" data-valid-email-message="Please enter valid email.">
+                            <input id="field_0" name="field_0" type="email" placeholder="Email address">
+                            <input type="hidden" name="successRedirectUrl" value="">
+                        </div>
+                        <div class="email-octopus-form-row-consent form-row fs-0">
+                            <div class="inline-block-top checkbox-wrapper">
+                                <input type="checkbox" id="consent" name="consent">
+                            </div>
+                            <label for="consent" class="privacy-policy-text inline-block-top"><span> As per your request, we will use the data provided to send you newsletters. You can change your mind any time by clicking the unsubscribe link in the footer of any marketing email your receive from us. By clicking on the SIGN UP button, you agree to our <a href="//dentacoin.com/privacy-policy">Privacy Policy</a></span></label>
+                        </div>
+                        <div class="form-row btn-container">
+                            <button type="submit">SIGN UP</button>
+                        </div>
+                        <div class="email-octopus-form-row-hp" aria-hidden="true">
+                            <!-- Do not remove this field, otherwise you risk bot sign-ups -->
+                            <input type="text" name="hp398a309b-ef00-11e8-a3c9-06b79b628af2" tabindex="-1" autocomplete="nope"/>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="apps-nav">
                 <ul itemscope="" itemtype="http://schema.org/SiteNavigationElement">

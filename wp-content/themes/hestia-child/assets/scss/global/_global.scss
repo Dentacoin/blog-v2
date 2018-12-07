@@ -258,16 +258,44 @@ img {
         .mailchimp-form {
             padding-left: 15px;
             font-size: 16px;
+            .email-octopus-success-message {
+                line-height: 40px;
+                font-size: 20px;
+                text-align: center;
+                color: green;
+                font-weight: bold;
+            }
+            .email-octopus-error-message {
+                line-height: 40px;
+                font-size: 20px;
+                text-align: center;
+                color: red;
+                font-weight: bold;
+            }
             form {
                 margin-top: 10px;
                 margin-bottom: 5px;
-                .mc4wp-response {
-                    font-size: 12px;
+                .email-octopus-form-row-consent {
+                    margin-top: 10px;
+                    .checkbox-wrapper {
+                        width: 20px;
+                    }
+                    .privacy-policy-text {
+                        width: calc(100% - 20px);
+                        padding-bottom: 10px;
+                        font-size: 12px;
+                        font-family: "Ubuntu Light";
+                        a {
+                            color: white;
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
             .title {
                 font-size: 18px;
                 padding-bottom: 5px;
+                padding-top: 10px;
             }
             input {
                 padding: 5px;
@@ -275,29 +303,25 @@ img {
             p {
                 margin-bottom: 5px;
             }
-            .privacy-policy-text {
-                padding-top: 5px;
-                padding-bottom: 10px;
-                font-size: 11px;
-                font-family: "Ubuntu Light";
-                a {
-                    color: white;
-                    text-decoration: underline;
-                }
+            .form-group {
+                margin: 0;
             }
             .btn-container {
-                input {
+                padding-bottom: 20px;
+                button {
                     background-color: $light_blue !important;
                     color: white;
+                    border: 0;
                     text-transform: uppercase;
                     width: 100%;
+                    padding: 5px;
                     text-align: center;
                     @include rounded(6px);
                 }
             }
         }
         .apps-nav {
-            font-size: 11px;
+            font-size: 12px;
             padding-left: 15px;
             text-align: center;
             ul {

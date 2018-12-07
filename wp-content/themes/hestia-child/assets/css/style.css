@@ -994,38 +994,59 @@ img {
     .main-sidebar .wrapper .mailchimp-form {
       padding-left: 15px;
       font-size: 16px; }
+      .main-sidebar .wrapper .mailchimp-form .email-octopus-success-message {
+        line-height: 40px;
+        font-size: 20px;
+        text-align: center;
+        color: green;
+        font-weight: bold; }
+      .main-sidebar .wrapper .mailchimp-form .email-octopus-error-message {
+        line-height: 40px;
+        font-size: 20px;
+        text-align: center;
+        color: red;
+        font-weight: bold; }
       .main-sidebar .wrapper .mailchimp-form form {
         margin-top: 10px;
         margin-bottom: 5px; }
-        .main-sidebar .wrapper .mailchimp-form form .mc4wp-response {
-          font-size: 12px; }
+        .main-sidebar .wrapper .mailchimp-form form .email-octopus-form-row-consent {
+          margin-top: 10px; }
+          .main-sidebar .wrapper .mailchimp-form form .email-octopus-form-row-consent .checkbox-wrapper {
+            width: 20px; }
+          .main-sidebar .wrapper .mailchimp-form form .email-octopus-form-row-consent .privacy-policy-text {
+            width: calc(100% - 20px);
+            padding-bottom: 10px;
+            font-size: 12px;
+            font-family: "Ubuntu Light"; }
+            .main-sidebar .wrapper .mailchimp-form form .email-octopus-form-row-consent .privacy-policy-text a {
+              color: white;
+              text-decoration: underline; }
       .main-sidebar .wrapper .mailchimp-form .title {
         font-size: 18px;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        padding-top: 10px; }
       .main-sidebar .wrapper .mailchimp-form input {
         padding: 5px; }
       .main-sidebar .wrapper .mailchimp-form p {
         margin-bottom: 5px; }
-      .main-sidebar .wrapper .mailchimp-form .privacy-policy-text {
-        padding-top: 5px;
-        padding-bottom: 10px;
-        font-size: 11px;
-        font-family: "Ubuntu Light"; }
-        .main-sidebar .wrapper .mailchimp-form .privacy-policy-text a {
+      .main-sidebar .wrapper .mailchimp-form .form-group {
+        margin: 0; }
+      .main-sidebar .wrapper .mailchimp-form .btn-container {
+        padding-bottom: 20px; }
+        .main-sidebar .wrapper .mailchimp-form .btn-container button {
+          background-color: #80b8dc !important;
           color: white;
-          text-decoration: underline; }
-      .main-sidebar .wrapper .mailchimp-form .btn-container input {
-        background-color: #80b8dc !important;
-        color: white;
-        text-transform: uppercase;
-        width: 100%;
-        text-align: center;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        -ms-border-radius: 6px;
-        border-radius: 6px; }
+          border: 0;
+          text-transform: uppercase;
+          width: 100%;
+          padding: 5px;
+          text-align: center;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -ms-border-radius: 6px;
+          border-radius: 6px; }
     .main-sidebar .wrapper .apps-nav {
-      font-size: 11px;
+      font-size: 12px;
       padding-left: 15px;
       text-align: center; }
       .main-sidebar .wrapper .apps-nav ul {
