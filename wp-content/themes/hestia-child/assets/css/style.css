@@ -995,11 +995,11 @@ img {
       padding-left: 15px;
       font-size: 16px; }
       .main-sidebar .wrapper .mailchimp-form .email-octopus-success-message {
-        line-height: 40px;
-        font-size: 20px;
+        line-height: 24px;
+        font-size: 18px;
         text-align: center;
         color: green;
-        font-weight: bold; }
+        font-weight: 700; }
       .main-sidebar .wrapper .mailchimp-form .email-octopus-error-message {
         line-height: 24px;
         font-size: 18px;
@@ -1639,7 +1639,7 @@ footer {
         font-size: 20px; }
       .single-post-container .content-container .description img.pull-left, .single-post-container .content-container .description img.pull-right {
         margin: 10px 20px; }
-      .single-post-container .content-container .description ul li {
+      .single-post-container .content-container .description ul li, .single-post-container .content-container .description ol li {
         list-style: disc inside none; }
       .single-post-container .content-container .description a {
         color: #80b8dc; }
