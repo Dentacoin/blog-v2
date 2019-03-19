@@ -136,3 +136,14 @@ add_filter('rest_endpoints', function($endpoints){
 
 //removing wordpress version from wp_head
 remove_action('wp_head', 'wp_generator');
+
+function dcn_sample_page_rewrite_rule() {
+    $pagePath = parse_url( $_SERVER['REQUEST_URI'] );
+    $pagePath = $pagePath['path'];
+    $pagePath = substr($pagePath, 1, -1);
+    if($pagePath == 'sample-page') {
+        wp_redirect(site_url());
+        exit();
+    }
+}
+add_action('init', 'dcn_sample_page_rewrite_rule' );

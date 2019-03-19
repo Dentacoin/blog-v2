@@ -30,7 +30,7 @@ $post_data = get_post_meta($curr_post->ID);
     <div class="custom-padding content-container">
         <div class="row">
             <div class="col-xs-12 col-lg-10 col-lg-offset-1 next-to-socials">
-                <div class="title"><?php echo $post->post_title; ?></div>
+                <h1 class="title"><?php echo $post->post_title; ?></h1>
                 <div class="author">Published by <a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php the_author_meta( 'display_name', $post->post_author ); ?></a> on <time><?php echo date('M d, Y', strtotime($post->post_date)); ?></time></div>
                 <div class="description">
                     <?php
