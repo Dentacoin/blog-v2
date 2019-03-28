@@ -22,11 +22,12 @@ get_header();
                     <div class="col-xs-12 featured-slider no-gutter-xs">
                         <?php
                         foreach($featured_posts_arr as $post)  {
+                            $post_data = get_post_meta($post->ID);
                             ?>
                             <div class="single-slide">
                                 <a href="<?php echo get_permalink($post); ?>">
                                     <figure itemscope="" itemtype="http://schema.org/ImageObject">
-                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" itemprop="contentUrl"/>
+                                        <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="" itemprop="contentUrl"/>
                                     </figure>
                                     <div class="content">
                                         <div class="wrapper">

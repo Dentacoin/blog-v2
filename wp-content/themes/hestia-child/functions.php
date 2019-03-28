@@ -72,11 +72,16 @@ function dcn_add_metabox()   {
 
 add_action('add_meta_boxes', "dcn_add_metabox");
 
-function dcn_meta_callback($post)    {
+function dcn_meta_callback($post) {
     wp_nonce_field( basename( __FILE__ ), 'dcn_posts_nonce' );
     wp_enqueue_media();
-    $dcn_stored_meta = get_post_meta( $post->ID );
+    $dcn_stored_meta = get_post_meta($post->ID);
     ?>
+    <div style="padding-bottom: 15px;">
+        <div style="padding-bottom: 10px;">Show image on single page:</div>
+        <input type="radio" <?php if($dcn_stored_meta['dcn_single_page_image_bool'][0] == 'true' || $dcn_stored_meta['dcn_single_page_image_bool'][0] == NULL) { ?> checked <?php } ?> name="dcn_single_page_image_bool" value="true"> Yes
+        <input type="radio" style="margin-left: 15px;" <?php if($dcn_stored_meta['dcn_single_page_image_bool'][0] == 'false') { ?> checked <?php } ?> name="dcn_single_page_image_bool" value="false"> No
+    </div>
     <div>
         <input type="text" name="dcn_single_page_image" id="image_url" class="regular-text" value="<?php
             if(!empty($dcn_stored_meta['dcn_single_page_image']))   {
@@ -119,6 +124,9 @@ function dcn_meta_save( $post_id ) {
     }
     if ( isset( $_POST[ 'dcn_single_page_image' ] ) ) {
         update_post_meta( $post_id, 'dcn_single_page_image', sanitize_text_field( $_POST[ 'dcn_single_page_image' ] ) );
+    }
+    if ( isset( $_POST[ 'dcn_single_page_image_bool' ] ) ) {
+        update_post_meta( $post_id, 'dcn_single_page_image_bool', sanitize_text_field( $_POST[ 'dcn_single_page_image_bool' ] ) );
     }
 }
 add_action('save_post', 'dcn_meta_save');

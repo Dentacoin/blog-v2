@@ -13,18 +13,20 @@ $post_data = get_post_meta($curr_post->ID);
 
 <div class="single-post-container">
     <?php
-    if(!empty($post_data['dcn_single_page_image'][0])) {
-        ?>
-        <figure class="row post-thumb" itemscope="" itemtype="http://schema.org/ImageObject">
-            <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="" itemprop="contentUrl"/>
-        </figure>
-        <?php
-    }else if(get_the_post_thumbnail_url())    {
-        ?>
-        <figure class="row post-thumb" itemscope="" itemtype="http://schema.org/ImageObject">
-            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" itemprop="contentUrl"/>
-        </figure>
-        <?php
+    if($post_data['dcn_single_page_image_bool'][0] == 'true') {
+        if(!empty($post_data['dcn_single_page_image'][0])) {
+            ?>
+            <figure class="row post-thumb" itemscope="" itemtype="http://schema.org/ImageObject">
+                <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="" itemprop="contentUrl"/>
+            </figure>
+            <?php
+        }else if(get_the_post_thumbnail_url())    {
+            ?>
+            <figure class="row post-thumb" itemscope="" itemtype="http://schema.org/ImageObject">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" itemprop="contentUrl"/>
+            </figure>
+            <?php
+        }
     }
     ?>
     <div class="custom-padding content-container">
