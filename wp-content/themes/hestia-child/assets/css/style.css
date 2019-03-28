@@ -1533,17 +1533,17 @@ footer {
       .homepage-container .custom-border.only-mobile {
         display: block; } }
   .homepage-container .featured-slider {
-    padding-bottom: 40px; }
+    padding: 0 5% 40px; }
     .homepage-container .featured-slider .single-slide {
       position: relative; }
       .homepage-container .featured-slider .single-slide figure {
-        width: 75%;
+        width: 80%;
         padding: 0 2px; }
       .homepage-container .featured-slider .single-slide .content {
-        width: 350px;
+        width: 450px;
         padding: 0 40px;
-        height: 90%;
-        right: 10px;
+        height: 80%;
+        right: 5%;
         background-color: white;
         position: absolute;
         top: 50%;
