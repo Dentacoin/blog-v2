@@ -1346,6 +1346,29 @@ img {
   .mobile-nav.active {
     transform: translateY(0%); }
 
+.container-404 {
+  padding-bottom: 100px; }
+  .container-404 figure {
+    padding-top: 70px;
+    padding-bottom: 50px; }
+  .container-404 .ops {
+    font-size: 20px; }
+  .container-404 .homepage-link {
+    padding-top: 20px; }
+    .container-404 .homepage-link a {
+      font-size: 18px;
+      text-decoration: underline;
+      color: #80b8dc; }
+  @media screen and (max-width: 767px) {
+    .container-404 {
+      padding-bottom: 50px; }
+      .container-404 figure {
+        padding-top: 30px; }
+      .container-404 .ops {
+        font-size: 18px; }
+      .container-404 .homepage-link a {
+        font-size: 14px; } }
+
 header nav.header-menu {
   font-size: 14px; }
   header nav.header-menu #main-navigation {
