@@ -91,3 +91,10 @@ function initMobileMenuActions()    {
     }
 }
 initMobileMenuActions();
+
+//rewrite pagination urls to lead to first page of posts list
+if(jQuery('.homepage-container .navigation.pagination')) {
+    for(var i = 0, len = jQuery('.homepage-container .navigation.pagination a').length; i < len; i+=1) {
+        jQuery('.homepage-container .navigation.pagination a').eq(i).attr('href', jQuery('.homepage-container .navigation.pagination a').eq(i).attr('href') + '#listing-posts');
+    }
+}

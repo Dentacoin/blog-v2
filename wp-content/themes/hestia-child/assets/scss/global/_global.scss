@@ -525,7 +525,7 @@ img {
             }
         }
     }
-    @include breakpoint($sm-down)   {
+    @include breakpoint($sm-down) {
         margin-bottom: -10px;
         .slick-track {
             a {

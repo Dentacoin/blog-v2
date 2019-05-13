@@ -2,7 +2,7 @@
 $first_roll = true;
 if(have_posts()) :
     ?>
-    <div class="listing-posts-module">
+    <div class="listing-posts-module" id="listing-posts">
         <?php
         while(have_posts()):
             the_post();

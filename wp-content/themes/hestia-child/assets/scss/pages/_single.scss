@@ -60,6 +60,14 @@
             p {
                 overflow: auto;
             }
+            @include breakpoint($sm-only) {
+                iframe {
+                    width: 100%;
+                }
+                * {
+                    max-width: 100%;
+                }  
+            }
         }
         .socials {
             padding-bottom: 20px;
