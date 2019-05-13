@@ -21,7 +21,7 @@ if($the_query->have_posts()):
         }else {
             $single_arr_end = '';
         }
-        $arr.='[{"post_title":"'.$post->post_title.'"},{"post_content":"'.substr($post->post_content, 0, 50).'"},{"thumb":"'.get_the_post_thumbnail_url($post->ID).'"},{"link":"'.get_permalink($post->ID).'"},{"date":"'.get_permalink($post->post_date).'"}]'.$single_arr_end;
+        $arr.='[{"post_title":"'.$post->post_title.'"},{"post_content":"'.substr(strip_tags($post->post_content), 0, 50).'"},{"thumb":"'.get_the_post_thumbnail_url($post->ID).'"},{"link":"'.get_permalink($post->ID).'"},{"date":"'.get_permalink($post->post_date).'"}]'.$single_arr_end;
     endwhile;
 endif;
 echo $arr.$arr_end;
