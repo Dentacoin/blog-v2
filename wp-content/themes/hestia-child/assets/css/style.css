@@ -1664,22 +1664,21 @@ footer {
   .single-post-container input.form-control[name='siwp_captcha_value'] {
     width: auto; }
   .single-post-container figure.post-thumb {
-    height: 300px;
+    height: 350px;
     position: relative;
     overflow: hidden; }
     .single-post-container figure.post-thumb img {
       position: absolute;
-      top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
     @media screen and (min-width: 1600px) {
       .single-post-container figure.post-thumb {
-        height: 400px; } }
+        height: 450px; } }
     @media screen and (max-width: 767px) {
       .single-post-container figure.post-thumb {
-        height: 180px; } }
+        height: 200px; } }
   .single-post-container .content-container {
     padding-top: 50px; }
     @media screen and (min-width: 1400px) {

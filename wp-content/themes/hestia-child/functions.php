@@ -90,6 +90,14 @@ function dcn_meta_callback($post) {
         ?>">
         <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Image">
     </div>
+    <div>
+        <div style="padding-bottom: 10px;padding-top: 10px;">Vertical offset:</div>
+        <input type="number" name="dcn_single_page_image_vertical_offset" class="regular-text" value="<?php
+            if(!empty($dcn_stored_meta['dcn_single_page_image_vertical_offset']))   {
+                echo $dcn_stored_meta['dcn_single_page_image_vertical_offset'][0];
+            }
+        ?>">
+    </div>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $('#upload-btn').click(function (e) {
@@ -127,6 +135,9 @@ function dcn_meta_save( $post_id ) {
     }
     if ( isset( $_POST[ 'dcn_single_page_image_bool' ] ) ) {
         update_post_meta( $post_id, 'dcn_single_page_image_bool', sanitize_text_field( $_POST[ 'dcn_single_page_image_bool' ] ) );
+    }
+    if ( isset( $_POST[ 'dcn_single_page_image_vertical_offset' ] ) ) {
+        update_post_meta( $post_id, 'dcn_single_page_image_vertical_offset', sanitize_text_field( $_POST[ 'dcn_single_page_image_vertical_offset' ] ) );
     }
 }
 add_action('save_post', 'dcn_meta_save');

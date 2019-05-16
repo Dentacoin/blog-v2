@@ -4,17 +4,21 @@
         width: auto;
     }
     figure.post-thumb {
-        height: 300px;
+        height: 350px;
         position: relative;
         overflow: hidden;
         img {
-            @include vertical-horizontal-align(absolute);
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
         }
         @include breakpoint($max-llgl)  {
-            height: 400px;
+            height: 450px;
         }
         @include breakpoint($xs)    {
-            height: 180px;
+            height: 200px;
         }
     }
     .content-container {

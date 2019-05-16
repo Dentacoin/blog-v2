@@ -17,7 +17,7 @@ $post_data = get_post_meta($curr_post->ID);
         if(!empty($post_data['dcn_single_page_image'][0])) {
             ?>
             <figure class="row post-thumb" itemscope="" itemtype="http://schema.org/ImageObject">
-                <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="" itemprop="contentUrl"/>
+                <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" style="<?php if(!empty($post_data['dcn_single_page_image_vertical_offset'][0])) { ?> top: <?php echo $post_data['dcn_single_page_image_vertical_offset'][0]; ?>%; <?php } ?>" alt="" itemprop="contentUrl"/>
             </figure>
             <?php
         }else if(get_the_post_thumbnail_url())    {
