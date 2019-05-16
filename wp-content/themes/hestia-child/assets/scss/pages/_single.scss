@@ -64,9 +64,9 @@
             p {
                 overflow: auto;
             }
-            @include breakpoint($sm-only) {
-                iframe {
-                    width: 100%;
+            @include breakpoint($sm-down) {
+                iframe {   
+                    height: 300px;
                 }
                 * {
                     max-width: 100%;

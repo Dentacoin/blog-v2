@@ -1708,9 +1708,9 @@ footer {
         color: #80b8dc; }
       .single-post-container .content-container .description p {
         overflow: auto; }
-      @media screen and (min-width: 768px) and (max-width: 991px) {
+      @media screen and (max-width: 991px) {
         .single-post-container .content-container .description iframe {
-          width: 100%; }
+          height: 300px; }
         .single-post-container .content-container .description * {
           max-width: 100%; } }
     .single-post-container .content-container .socials {
