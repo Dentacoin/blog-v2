@@ -27,7 +27,17 @@ get_header();
                             <div class="single-slide">
                                 <a href="<?php echo get_permalink($post); ?>">
                                     <figure itemscope="" itemtype="http://schema.org/ImageObject">
-                                        <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="" itemprop="contentUrl"/>
+                                        <?php
+                                        if(!empty($post_data['dcn_single_page_image'][0])) {
+                                            ?>
+                                                <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="" itemprop="contentUrl"/>
+                                            <?php
+                                        } else if(!empty(get_the_post_thumbnail_url())) {
+                                            ?>
+                                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" itemprop="contentUrl"/>
+                                            <?php
+                                        }
+                                        ?>
                                     </figure>
                                     <div class="content">
                                         <div class="wrapper">
