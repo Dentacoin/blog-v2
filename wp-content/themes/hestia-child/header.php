@@ -126,7 +126,15 @@
     <div class="container-fluid main-wrapper moved">
         <header class="custom-padding">
             <div class="row fs-0">
-                <nav class="col-xs-4 col-md-9 inline-block header-menu">
+                <?php
+                if(is_single()) {
+                    ?>
+                    <a href="<?php echo site_url(''); ?>" class="col-md-2 col-lg-1 inline-block go-back">< back</a>
+                    <?php
+                }
+                ?>
+                <nav class="col-xs-4 <?php
+                if(is_single()) { ?> col-md-7 col-lg-8 <?php }else { ?> col-md-9 <?php } ?> inline-block header-menu no-gutter">
                     <?php
                     wp_nav_menu(
                         array(
