@@ -124,7 +124,8 @@
         </figure>
     </aside>
     <div class="container-fluid main-wrapper moved">
-        <header class="custom-padding">
+        <header class="custom-padding <?php
+        if(is_single()) { ?> single <?php }?>">
             <div class="row fs-0">
                 <?php
                 if(is_single()) {

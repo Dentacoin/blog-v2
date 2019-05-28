@@ -1473,21 +1473,21 @@ header .socials {
 header.custom-padding {
   padding-left: 5%;
   padding-right: 5%; }
-  header.custom-padding .go-back {
-    color: black;
-    padding-left: 0;
-    font-size: 16px; }
-    @media screen and (min-width: 992px) and (max-width: 1199px) {
-      header.custom-padding .go-back {
-        font-size: 14px;
-        padding-left: 15px; } }
-    @media screen and (max-width: 991px) {
-      header.custom-padding .go-back {
-        display: none; } }
+header.single.custom-padding .go-back {
+  color: black;
+  padding-left: 0;
+  font-size: 16px; }
   @media screen and (min-width: 992px) and (max-width: 1199px) {
-    header.custom-padding {
-      padding-left: 0;
-      padding-right: 0; } }
+    header.single.custom-padding .go-back {
+      font-size: 14px;
+      padding-left: 15px; } }
+  @media screen and (max-width: 991px) {
+    header.single.custom-padding .go-back {
+      display: none; } }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  header.single.custom-padding {
+    padding-left: 0;
+    padding-right: 0; } }
 @media screen and (max-width: 991px) {
   header nav.header-menu {
     display: none; }

@@ -105,6 +105,8 @@ header {
     &.custom-padding {
         padding-left: 5%;
         padding-right: 5%;
+    }
+    &.single.custom-padding {
         .go-back {
             color: black;
             padding-left: 0;
@@ -120,7 +122,7 @@ header {
         @include breakpoint($md-only) {
             padding-left: 0;
             padding-right: 0;
-        }  
+        } 
     }
     @include breakpoint($sm-down)   {
         nav.header-menu {
