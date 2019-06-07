@@ -74,7 +74,7 @@
                                 <div class="inline-block-top checkbox-wrapper">
                                     <input type="checkbox" id="consent" name="consent" required>
                                 </div>
-                                <label for="consent" class="privacy-policy-text inline-block-top"><span>By subscribing to our newsletter, you agree to <a href="//dentacoin.com/privacy-policy">our Privacy Policy</a></span></label>
+                                <label for="consent" class="privacy-policy-text inline-block-top"><span>By subscribing to our newsletter, you agree to <a href="//dentacoin.com/privacy-policy" target="_blank">our Privacy Policy</a></span></label>
                             </div>
                             <div class="form-row btn-container">
                                 <input type="hidden" name="b_61ace7d2b009198ca373cb213_993df5967d" tabindex="-1" value="">
