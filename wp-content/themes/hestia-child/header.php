@@ -74,11 +74,11 @@
                                 <div class="inline-block-top checkbox-wrapper">
                                     <input type="checkbox" id="consent" name="consent" required>
                                 </div>
-                                <label for="consent" class="privacy-policy-text inline-block-top"><span> As per your request, we will use the data provided to send you newsletters. You can change your mind any time by clicking the unsubscribe link in the footer of any marketing email your receive from us. By clicking on the SIGN UP button, you agree to our <a href="//dentacoin.com/privacy-policy">Privacy Policy</a></span></label>
+                                <label for="consent" class="privacy-policy-text inline-block-top"><span>By subscribing to our newsletter, you agree to <a href="//dentacoin.com/privacy-policy">our Privacy Policy</a></span></label>
                             </div>
                             <div class="form-row btn-container">
                                 <input type="hidden" name="b_61ace7d2b009198ca373cb213_993df5967d" tabindex="-1" value="">
-                                <div class="clear btn-container"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                <div class="clear btn-container"><input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                             </div>
                         </div>
                     </form>
