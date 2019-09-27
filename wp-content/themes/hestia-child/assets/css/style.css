@@ -1717,6 +1717,24 @@ footer {
         font-size: 20px; }
       .single-post-container .content-container .description img.pull-left, .single-post-container .content-container .description img.pull-right {
         margin: 10px 20px; }
+      .single-post-container .content-container .description img.alignright {
+        float: right;
+        margin: 0 0 1em 1em; }
+      .single-post-container .content-container .description img.alignleft {
+        float: left;
+        margin: 0 1em 1em 0; }
+      .single-post-container .content-container .description img.aligncenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
+      .single-post-container .content-container .description .alignright {
+        float: right; }
+      .single-post-container .content-container .description .alignleft {
+        float: left; }
+      .single-post-container .content-container .description .aligncenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
       .single-post-container .content-container .description ul li, .single-post-container .content-container .description ol li {
         list-style: disc inside none; }
       .single-post-container .content-container .description a {
