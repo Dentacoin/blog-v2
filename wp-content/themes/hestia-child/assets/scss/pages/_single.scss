@@ -50,7 +50,7 @@
                 font-size: 20px;
             }
             img {
-                &.pull-left, &.pull-right {
+                &.pull-left, &.pull-right  {
                     margin: 10px 20px;
                 }
             }
@@ -59,7 +59,7 @@
             img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
             .alignright { float: right; }
             .alignleft { float: left; }
-            .aligncenter { display: block; margin-left: auto; margin-right: auto; }   
+            .aligncenter { display: block; margin-left: auto; margin-right: auto; }
             ul, ol {
                 li {
                     list-style: disc inside none;

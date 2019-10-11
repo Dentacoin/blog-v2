@@ -121,7 +121,10 @@ function dcn_meta_callback($post) {
     <?php
 }
 
-function dcn_meta_save( $post_id ) {
+function dcn_post_save($post_id) {
+    if(!empty($_POST)) {
+        fixTheCountOfFeaturedAndMostPopuparPosts($_POST, $post_id);
+    }
     // Checks save status
     $is_autosave = wp_is_post_autosave( $post_id );
     $is_revision = wp_is_post_revision( $post_id );
@@ -140,7 +143,7 @@ function dcn_meta_save( $post_id ) {
         update_post_meta( $post_id, 'dcn_single_page_image_vertical_offset', sanitize_text_field( $_POST[ 'dcn_single_page_image_vertical_offset' ] ) );
     }
 }
-add_action('save_post', 'dcn_meta_save');
+add_action('save_post', 'dcn_post_save');
 
 //Stops the WP api requests for retrieving the users data
 add_filter('rest_endpoints', function($endpoints){
@@ -166,3 +169,85 @@ function dcn_sample_page_rewrite_rule() {
     }
 }
 add_action('init', 'dcn_sample_page_rewrite_rule' );
+
+function dcn_post_edit($post_id) {
+    if(!empty($_POST)) {
+        fixTheCountOfFeaturedAndMostPopuparPosts($_POST, $post_id);
+    }
+}
+
+function fixTheCountOfFeaturedAndMostPopuparPosts($post_data, $post_id) {
+    if(!empty($post_data['tax_input']) && is_admin()) {
+        if(!empty($post_data['tax_input']['extra-category'])) {
+            $terms = get_terms('extra-category', array(
+                'hide_empty' => false,
+            ));
+            global $post;
+            foreach($post_data['tax_input']['extra-category'] as $tax_id) {
+                if($tax_id != '0') {
+                    foreach($terms as $term) {
+                        if((int)$tax_id == $term->term_id) {
+                            $the_query = new WP_Query(array(
+                                'post_type' => 'post',
+                                'posts_per_page' => -1,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'extra-category',
+                                        'field' => 'slug',
+                                        'terms' => $term->slug
+                                    )
+                                )
+
+                            ));
+
+                            if($term->slug == 'featured' && $the_query->post_count > 5) {
+                                $counter = 0;
+                                if($the_query->have_posts()) :
+                                    while($the_query->have_posts()) : $the_query->the_post();
+                                        if($counter >= 5) {
+                                            //update
+                                            $this_post_terms = wp_get_post_terms($post->ID, 'extra-category');
+                                            if(!empty($this_post_terms) && is_array($this_post_terms)) {
+                                                foreach($this_post_terms as $key => $this_post_term) {
+                                                    if($this_post_term->slug == 'featured') {
+                                                        unset($this_post_terms[$key]);
+                                                    }
+                                                }
+                                            }
+                                            wp_set_post_terms($post->ID, $this_post_terms, 'extra-category');
+                                        }
+                                        $counter+=1;
+                                    endwhile;
+                                endif;
+                            }
+
+                            if($term->slug == 'most-popular' && $the_query->post_count > 10) {
+                                $most_popular_counter = 0;
+                                if($the_query->have_posts()) :
+                                    while($the_query->have_posts()) : $the_query->the_post();
+                                        if($most_popular_counter >= 10) {
+                                            //update
+                                            $this_post_terms = wp_get_post_terms($post->ID, 'extra-category');
+                                            if(!empty($this_post_terms) && is_array($this_post_terms)) {
+                                                foreach($this_post_terms as $key => $this_post_term) {
+                                                    if($this_post_term->slug == 'most-popular') {
+                                                        unset($this_post_terms[$key]);
+                                                    }
+                                                }
+                                            }
+                                            wp_set_post_terms($post->ID, $this_post_terms, 'extra-category');
+                                        }
+                                        $most_popular_counter+=1;
+                                    endwhile;
+                                endif;
+                            }
+
+                            wp_reset_query();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+add_action('edit_post', 'dcn_post_edit');
