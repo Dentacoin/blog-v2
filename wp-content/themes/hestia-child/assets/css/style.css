@@ -1369,6 +1369,9 @@ img {
       .container-404 .homepage-link a {
         font-size: 14px; } }
 
+.guteurlsBottom {
+  display: none !important; }
+
 header nav.header-menu {
   font-size: 14px; }
   header nav.header-menu #main-navigation {
