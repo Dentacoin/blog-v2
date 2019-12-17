@@ -1,5 +1,13 @@
 .single-post-container {
     padding-bottom: 100px;
+    .card-profile {
+        .card-title {
+            font-weight: bold;
+        }
+        .description {
+            font-size: 15px;
+        }
+    }
     input.form-control[name='siwp_captcha_value'] {
         width: auto;
     }
