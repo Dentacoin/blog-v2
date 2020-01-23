@@ -45,7 +45,7 @@ get_header();
                                                 <time><?php echo date('M d, Y', strtotime($post->post_date)); ?></time>
                                                 <div class="title"><?php echo $post->post_title; ?></div>
                                                 <div class="description-text"><?php
-                                                    echo substr(strip_tags($post->post_content), 0, 300);
+                                                    echo substr(strip_shortcodes(strip_tags($post->post_content)), 0, 300);
                                                     ?>...</div>
                                                 <div class="btn-container">
                                                     Continue Reading >>
