@@ -23,8 +23,16 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
-        gtag('config', 'UA-97167262-2');
+        <?php if (empty($_COOKIE['performance_cookies'])) {
+            ?>
+                gtag('config', 'UA-97167262-2', {'anonymize_ip': true});
+            <?php
+        } else {
+            ?>
+                gtag('config', 'UA-97167262-2');
+            <?php
+        }
+        ?>
     </script>
 </head>
 
@@ -37,7 +45,7 @@
     </div>
     <nav>
         <?php
-        wp_nav_menu(array('theme_location'  => 'mobile-header-nav'));
+            wp_nav_menu(array('theme_location'  => 'mobile-header-nav'));
         ?>
     </nav>
 </div>
