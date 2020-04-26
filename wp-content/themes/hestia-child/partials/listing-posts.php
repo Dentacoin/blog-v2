@@ -31,7 +31,7 @@ if(have_posts()) :
                             <?php
                         }
                         ?>
-                        <div class="description-text"><?php echo substr(strip_tags($post->post_content), 0, 500); ?>...</div>
+                        <div class="description-text"><?php echo substr(strip_shortcodes(strip_tags($post->post_content)), 0, 500); ?>...</div>
                         <div class="btn-container">
                             <a href="<?php echo get_permalink($post); ?>">Continue Reading >></a>
                         </div>
