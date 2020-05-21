@@ -107,7 +107,9 @@ function checkIfCookie()    {
     if (jQuery('.privacy-policy-cookie').length > 0)  {
         jQuery('.privacy-policy-cookie .accept-all').click(function()    {
             basic.cookies.set('performance_cookies', 1);
+            basic.cookies.set('functionality_cookies', 1);
             basic.cookies.set('marketing_cookies', 1);
+            basic.cookies.set('strictly_necessary_policy', 1);
 
             window.location.reload();
         });
@@ -127,6 +129,8 @@ function checkIfCookie()    {
             });
 
             jQuery('.custom-cookie-save').click(function() {
+                basic.cookies.set('strictly_necessary_policy', 1);
+
                 if(jQuery('#marketing-cookies').is(':checked')) {
                     console.log('set marketing');
                     basic.cookies.set('marketing_cookies', 1);
