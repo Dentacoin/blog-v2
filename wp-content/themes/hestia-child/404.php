@@ -10,7 +10,7 @@ $query_images = new WP_Query( $query_images_args );
 
 $images = array();
 foreach ($query_images->posts as $image ) {
-    var_dump(ucfirst(str_replace('-', ' ', dcn_transliterate($my_image_title))));
+    var_dump(ucfirst(str_replace('-', ' ', dcn_transliterate($image->post_title))));
 }
 die('asd');
 get_header();
