@@ -9,10 +9,10 @@ $query_images_args = array(
 $query_images = new WP_Query( $query_images_args );
 
 $images = array();
-foreach ($query_images->posts as $image ) {
+foreach ($query_images->posts as $image) {
     $currentAlt = get_post_meta(get_post_thumbnail_id($image), '_wp_attachment_image_alt', true);
     if (empty($currentAlt)) {
-        var_dump(ucfirst(str_replace('-', ' ', dcn_transliterate($image->post_title))));
+        update_post_meta($image->ID, '_wp_attachment_image_alt', ucfirst(str_replace('-', ' ', dcn_transliterate($image->post_title))));
     }
 }
 die('asd');
