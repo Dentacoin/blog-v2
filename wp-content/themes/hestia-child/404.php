@@ -1,5 +1,4 @@
 <?php
-get_header();
 $query_images_args = array(
     'post_type'      => 'attachment',
     'post_mime_type' => 'image',
@@ -8,12 +7,13 @@ $query_images_args = array(
 );
 
 $query_images = new WP_Query( $query_images_args );
-var_dump($query_images->posts);
 
-/*$images = array();
-foreach ( $query_images->posts as $image ) {
-    $images[] = wp_get_attachment_url( $image->ID );
-}*/
+$images = array();
+foreach ($query_images->posts as $image ) {
+    var_dump(ucfirst(str_replace('-', ' ', dcn_transliterate($my_image_title))));
+}
+die('asd');
+get_header();
 ?>
     <div class="container-404">
         <figure class="logo" itemscope="" itemtype="http://schema.org/ImageObject">
