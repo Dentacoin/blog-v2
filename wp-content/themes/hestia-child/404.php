@@ -10,7 +10,10 @@ $query_images = new WP_Query( $query_images_args );
 
 $images = array();
 foreach ($query_images->posts as $image ) {
-    var_dump(ucfirst(str_replace('-', ' ', dcn_transliterate($image->post_title))));
+    $currentAlt = get_post_meta(get_post_thumbnail_id($image), '_wp_attachment_image_alt', true);
+    if (empty($currentAlt)) {
+        var_dump(ucfirst(str_replace('-', ' ', dcn_transliterate($image->post_title))));
+    }
 }
 die('asd');
 get_header();
