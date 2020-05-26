@@ -30,11 +30,11 @@ get_header();
                                         <?php
                                         if(!empty($post_data['dcn_single_page_image'][0])) {
                                             ?>
-                                                <img src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="" itemprop="contentUrl"/>
+                                                <img data-defer-src="<?php echo $post_data['dcn_single_page_image'][0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($post), '_wp_attachment_image_alt', true); ?>" itemprop="contentUrl"/>
                                             <?php
                                         } else if(!empty(get_the_post_thumbnail_url())) {
                                             ?>
-                                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" itemprop="contentUrl"/>
+                                            <img data-defer-src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($post), '_wp_attachment_image_alt', true); ?>" itemprop="contentUrl"/>
                                             <?php
                                         }
                                         ?>

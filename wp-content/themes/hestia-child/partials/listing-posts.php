@@ -25,7 +25,7 @@ if(have_posts()) :
                             ?>
                             <figure class="inline-block" itemscope="" itemtype="http://schema.org/ImageObject">
                                 <a href="<?php echo get_permalink($post); ?>">
-                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" itemprop="contentUrl"/>
+                                    <img data-defer-src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($post), '_wp_attachment_image_alt', true); ?>" itemprop="contentUrl"/>
                                 </a>
                             </figure>
                             <?php

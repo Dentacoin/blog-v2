@@ -251,3 +251,12 @@ function fixTheCountOfFeaturedAndMostPopuparPosts($post_data, $post_id) {
     }
 }
 add_action('edit_post', 'dcn_post_edit');
+
+// on media saving to db automatically generate alt text from the title
+function dcn_image_meta_upon_image_upload($post_ID) {
+    if (wp_attachment_is_image($post_ID)) {
+        $my_image_title = get_post($post_ID)->post_title;
+        update_post_meta( $post_ID, '_wp_attachment_image_alt', ucfirst(str_replace('-', ' ', dcn_transliterate($my_image_title))));
+    }
+}
+add_action('add_attachment', 'dcn_image_meta_upon_image_upload');
