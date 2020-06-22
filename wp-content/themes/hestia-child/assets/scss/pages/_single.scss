@@ -175,6 +175,15 @@
                 font-weight: 400;
             }
         }
+        @media (min-width: 992px) {
+            .col-md-4 {
+                width: 50%; 
+            }
+        }
+        textarea {
+            margin: 0 15px;
+            width: calc(100% - 30px);
+        }
         p {
             margin-bottom: 10px;
             &.aiowps-captcha {

@@ -1984,6 +1984,12 @@ footer {
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 400; }
+    @media (min-width: 992px) {
+      .single-post-container .comments-form .col-md-4 {
+        width: 50%; } }
+    .single-post-container .comments-form textarea {
+      margin: 0 15px;
+      width: calc(100% - 30px); }
     .single-post-container .comments-form p {
       margin-bottom: 10px; }
       .single-post-container .comments-form p.aiowps-captcha {
