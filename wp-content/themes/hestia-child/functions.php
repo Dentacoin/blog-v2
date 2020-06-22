@@ -271,3 +271,9 @@ function dcn_image_meta_upon_image_upload($post_ID) {
     }
 }
 add_action('add_attachment', 'dcn_image_meta_upon_image_upload');
+
+function disable_comment_url($fields) {
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','disable_comment_url');
