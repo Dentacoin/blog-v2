@@ -11,6 +11,11 @@
  *
  * @var bool
  */
+
+header('Referrer-Policy: no-referrer');
+header('X-XSS-Protection: 1; mode=block');
+header('X-Frame-Options: DENY');
+
 define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
