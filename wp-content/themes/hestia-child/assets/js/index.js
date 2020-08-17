@@ -208,3 +208,9 @@ function loadDeferImages() {
     }
 }
 loadDeferImages();
+
+if (typeof(dcnCookie) != undefined) {
+    dcnCookie.init({
+        'google_app_id' : 'UA-97167262-2'
+    });
+}
