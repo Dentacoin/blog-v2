@@ -33,7 +33,7 @@ if (is_single()) {
             ?>
               "image": {
                 "@type": "ImageObject",
-                "url": "<?php get_the_post_thumbnail_url($post->ID); ?>",
+                "url": "<?php echo get_the_post_thumbnail_url($post->ID); ?>",
                 "width": "<?php echo $attachment[1]; ?>",
                 "height": "<?php echo $attachment[2]; ?>"
                 },
