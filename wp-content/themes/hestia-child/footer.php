@@ -49,7 +49,9 @@ if (is_single()) {
     "name": "Dentacoin Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.dentacoin.com/wp-content/uploads/2020/05/weekly-updates-v3-inside13.png"
+      "url": "https://blog.dentacoin.com/wp-content/themes/hestia-child/assets/images/one-line-logo-black.png",
+      "width": "2018",
+      "height": "442"
     }
   },
   "datePublished": "<?php echo $post->post_date; ?>"
