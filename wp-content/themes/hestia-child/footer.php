@@ -49,7 +49,7 @@ if (is_single()) {
     "name": "Dentacoin Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://blog.dentacoin.com/wp-content/themes/hestia-child/assets/images/blog-logo.svg",
+      "url": "https://dentacoin.com/assets/images/logo.svg",
       "width": "178",
       "height": "32"
     }
