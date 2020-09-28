@@ -27,13 +27,13 @@ if (is_single()) {
   "headline": "<?php echo $post->post_title; ?>",
   "description": "<?php substr($post->post_content, 0, 130); ?>...",
     <?php
-        if (!empty(get_the_post_thumbnail_url($post))) {
+        if (!empty(get_the_post_thumbnail_url($post->ID))) {
             $post_thumbnail_id = get_post_thumbnail_id($post->ID);
             $attachment = wp_get_attachment_image_src($post_thumbnail_id);
             ?>
               "image": {
                 "@type": "ImageObject",
-                "url": "<?php get_the_post_thumbnail_url($post); ?>",
+                "url": "<?php get_the_post_thumbnail_url($post->ID); ?>",
                 "width": "<?php echo $attachment[1]; ?>",
                 "height": "<?php echo $attachment[2]; ?>"
                 },
