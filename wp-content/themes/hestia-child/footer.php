@@ -49,9 +49,7 @@ if (is_single()) {
     "name": "Dentacoin Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://dentacoin.com/assets/images/logo.svg",
-      "width": "178",
-      "height": "32"
+      "url": "https://dentacoin.com/assets/images/logo.svg"
     }
   },
   "datePublished": "<?php echo $post->post_date; ?>"
