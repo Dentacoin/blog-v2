@@ -13,7 +13,7 @@ if(have_posts()) :
                 <?php
             }
             ?>
-            <div class="custom-padding">
+            <article class="custom-padding">
                 <div class="row list-with-posts">
                     <div class="col-xs-12 col-sm-offset-2 col-sm-8 no-gutter-xs single-post-in-list">
                         <div class="post-title">
@@ -37,7 +37,7 @@ if(have_posts()) :
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         <?php
         $first_roll = false;
         endwhile;

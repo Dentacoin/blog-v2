@@ -40,7 +40,7 @@
 <div class="mobile-nav">
     <div class="close-btn">
         <a href="javascript:void(0)">
-            <img src="<?php echo get_template_directory_uri(); ?>-child/assets/images/close-mobile-nav.svg"/>
+            <img src="<?php echo get_template_directory_uri(); ?>-child/assets/images/close-mobile-nav.svg" alt="Close mobile nav button icon"/>
         </a>
     </div>
     <nav>

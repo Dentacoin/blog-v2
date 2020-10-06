@@ -24,7 +24,7 @@ get_header();
                         foreach($featured_posts_arr as $post)  {
                             $post_data = get_post_meta($post->ID);
                             ?>
-                            <div class="single-slide">
+                            <article class="single-slide">
                                 <a href="<?php echo get_permalink($post); ?>">
                                     <figure itemscope="" itemtype="http://schema.org/ImageObject">
                                         <?php
@@ -54,7 +54,7 @@ get_header();
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                            </article>
                             <?php
                         }
                         ?>
