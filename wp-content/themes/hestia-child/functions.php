@@ -3,6 +3,8 @@
 //===============================STYLES AND SCRIPTS=================================================
 require_once(get_stylesheet_directory() . '/includes/styles-and-scripts.php');
 
+require_once( get_stylesheet_directory() . '/inc/template-tags.php' );
+
 
 function dcn_add_menu()  {
     register_nav_menu('extra-footer', 'Extra Footer Navigation');

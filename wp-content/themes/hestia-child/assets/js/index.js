@@ -188,28 +188,29 @@ if(jQuery('img[data-defer-src]').length) {
 }
 
 function loadDeferImages() {
-    jQuery('body').addClass('overflow-hidden');
-    var window_width = jQuery(window).width();
-    jQuery('body').removeClass('overflow-hidden');
+    if(jQuery('img[data-defer-src]').length) {
+        var window_width = jQuery(window).width();
+        for(var i = 0, len = jQuery('img[data-defer-src]').length; i < len; i+=1) {
+            if(basic.isInViewport(jQuery('img[data-defer-src]').eq(i)) && jQuery('img[data-defer-src]').eq(i).attr('src') == undefined) {
+                if(window_width < 500 && jQuery('img[data-defer-src]').eq(i).attr('data-xss-image') != undefined) {
+                    jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-xss-image'));
+                } else if(window_width < 768 && jQuery('img[data-defer-src]').eq(i).attr('data-xs-image') != undefined) {
+                    jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-xs-image'));
+                } else if(window_width < 992 && jQuery('img[data-defer-src]').eq(i).attr('data-sm-image') != undefined) {
+                    jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-sm-image'));
+                } else {
+                    console.log(jQuery('img[data-defer-src]').eq(i).attr('data-defer-src'));
+                    jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-defer-src'));
+                }
 
-    for(var i = 0, len = jQuery('img[data-defer-src]').length; i < len; i+=1) {
-        if(basic.isInViewport(jQuery('img[data-defer-src]').eq(i)) && jQuery('img[data-defer-src]').eq(i).attr('src') == undefined) {
-            if(window_width < 500 && jQuery('img[data-defer-src]').eq(i).attr('data-xss-image') != undefined) {
-                jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-xss-image'));
-            } else if(window_width < 768 && jQuery('img[data-defer-src]').eq(i).attr('data-xs-image') != undefined) {
-                jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-xs-image'));
-            } else if(window_width < 992 && jQuery('img[data-defer-src]').eq(i).attr('data-sm-image') != undefined) {
-                jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-sm-image'));
-            } else {
-                console.log(jQuery('img[data-defer-src]').eq(i).attr('data-defer-src'));
-                jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-defer-src'));
+                jQuery('img[data-defer-src]').eq(i).removeAttr('data-defer-src');
             }
         }
     }
 }
 loadDeferImages();
 
-if (typeof(dcnCookie) != undefined) {
+if (typeof(dcnCookie) != 'undefined') {
     dcnCookie.init({
         'google_app_id' : 'UA-97167262-2'
     });
