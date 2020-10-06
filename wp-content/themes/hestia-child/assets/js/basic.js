@@ -148,11 +148,13 @@ var basic = {
         return password.trim().length >= 8 && password.trim().length <= 30 && basic.hasLowerCase(password) && basic.hasUpperCase(password) && basic.hasNumber(password);
     },
     isInViewport: function(el) {
-        var elementTop = jQuery(el).offset().top;
-        var elementBottom = elementTop + jQuery(el).outerHeight();
-        var viewportTop = jQuery(window).scrollTop();
-        var viewportBottom = viewportTop + jQuery(window).height();
-        return elementBottom > viewportTop && elementTop < viewportBottom;
+        if (jQuery(el).length) {
+            var elementTop = jQuery(el).offset().top;
+            var elementBottom = elementTop + jQuery(el).outerHeight();
+            var viewportTop = jQuery(window).scrollTop();
+            var viewportBottom = viewportTop + jQuery(window).height();
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        }
     },
     isMobile: function() {
         var isMobile = false; //initiate as false
