@@ -22,7 +22,7 @@ if(!empty($most_popular_posts_arr)){
                 <a href="<?php echo get_permalink($slide); ?>">
                     <div class="single-slide fs-0">
                         <figure class="inline-block" itemscope="" itemtype="http://schema.org/ImageObject">
-                            <img data-defer-src="<?php echo get_the_post_thumbnail_url($slide); ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($slide), '_wp_attachment_image_alt', true); ?>" itemprop="contentUrl"/>
+                            <img src="<?php echo get_the_post_thumbnail_url($slide); ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id($slide), '_wp_attachment_image_alt', true); ?>" itemprop="contentUrl"/>
                         </figure>
                         <div class="content inline-block">
                             <div class="title"><?php echo $slide->post_title; ?></div>

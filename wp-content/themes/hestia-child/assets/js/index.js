@@ -4,7 +4,7 @@ jQuery(window).on('load', function()   {
 
 jQuery(document).ready(function()   {
     checkIfCookie();
-    
+
     loadDeferImages();
 });
 
@@ -35,10 +35,6 @@ function initMostPopularPostsSlider()   {
                 }
             }
         ]
-    });
-
-    jQuery('.most-popular-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-        loadDeferImages();
     });
 }
 
