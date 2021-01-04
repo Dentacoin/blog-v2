@@ -4,6 +4,8 @@ jQuery(window).on('load', function()   {
 
 jQuery(document).ready(function()   {
     checkIfCookie();
+    
+    loadDeferImages();
 });
 
 //PAGES
@@ -34,6 +36,10 @@ function initMostPopularPostsSlider()   {
             }
         ]
     });
+
+    jQuery('.most-popular-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        loadDeferImages();
+    });
 }
 
 function initFeaturedPostsSlider()   {
@@ -43,6 +49,10 @@ function initFeaturedPostsSlider()   {
         autoplay: true,
         infinite: false,
         autoplaySpeed: 8000,
+    });
+
+    jQuery('.homepage-container .featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        loadDeferImages();
     });
 }
 
@@ -190,7 +200,7 @@ if(jQuery('img[data-defer-src]').length) {
 function loadDeferImages() {
     if(jQuery('img[data-defer-src]').length) {
         var window_width = jQuery(window).width();
-        for(var i = 0, len = jQuery('img[data-defer-src]').length; i < len; i+=1) {
+        for (var i = 0, len = jQuery('img[data-defer-src]').length; i < len; i+=1) {
             if(basic.isInViewport(jQuery('img[data-defer-src]').eq(i)) && jQuery('img[data-defer-src]').eq(i).attr('src') == undefined) {
                 if(window_width < 500 && jQuery('img[data-defer-src]').eq(i).attr('data-xss-image') != undefined) {
                     jQuery('img[data-defer-src]').eq(i).attr('src', jQuery('img[data-defer-src]').eq(i).attr('data-xss-image'));
@@ -208,7 +218,6 @@ function loadDeferImages() {
         }
     }
 }
-loadDeferImages();
 
 if (typeof(dcnCookie) != 'undefined') {
     dcnCookie.init({
