@@ -115,7 +115,7 @@
                     </form>
                 </div>
             </div>-->
-            <div class="apps-nav">
+            <div class="apps-nav" style="padding-top: 30px;">
                 <ul itemscope="" itemtype="http://schema.org/SiteNavigationElement">
                     <li><a itemprop="url" href="https://dentacoin.com/" target="_blank"><span itemprop="name">Dentacoin</span></a></li>
                     <li>|</li>
