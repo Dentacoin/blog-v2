@@ -72,7 +72,7 @@
             <figure class="pictograms" itemscope="" itemtype="http://schema.org/ImageObject">
                 <img src="<?php echo get_template_directory_uri(); ?>-child/assets/images/pictograms.svg" alt="Pictorgams" itemprop="contentUrl"/>
             </figure>
-            <div class="mailchimp-form">
+            <!--<div class="mailchimp-form">
                 <div id="mc_embed_signup">
                     <div class="title">SUBSCRIBE TO OUR LIST</div>
                     <form action="https://dentacoin.us16.list-manage.com/subscribe/post?u=61ace7d2b009198ca373cb213&amp;id=993df5967d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
@@ -114,7 +114,7 @@
                         </div>
                     </form>
                 </div>-->
-            </div>
+            </div>-->
             <div class="apps-nav">
                 <ul itemscope="" itemtype="http://schema.org/SiteNavigationElement">
                     <li><a itemprop="url" href="https://dentacoin.com/" target="_blank"><span itemprop="name">Dentacoin</span></a></li>
