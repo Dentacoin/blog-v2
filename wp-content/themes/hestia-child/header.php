@@ -91,7 +91,7 @@
                         </div>
                     </form>
                 </div>
-                <!--<div class="email-octopus-form-wrapper">
+                <div class="email-octopus-form-wrapper">
                     <p class="email-octopus-success-message"></p>
                     <p class="email-octopus-error-message"></p>
                     <form method="post" action="https://emailoctopus.com/lists/398a309b-ef00-11e8-a3c9-06b79b628af2/members/embedded/1.3s/add" class="email-octopus-form" data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6" data-success-message="Thank you for signing up!">
@@ -113,7 +113,7 @@
                             <input type="text" name="hp398a309b-ef00-11e8-a3c9-06b79b628af2" tabindex="-1" autocomplete="nope"/>
                         </div>
                     </form>
-                </div>-->
+                </div>
             </div>-->
             <div class="apps-nav">
                 <ul itemscope="" itemtype="http://schema.org/SiteNavigationElement">
